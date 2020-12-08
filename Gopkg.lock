@@ -2,20 +2,43 @@
 
 
 [[projects]]
+  digest = "1:a9bf5dcb7adf70095752108cc9a64ac0b445b7337434fbd8f865f1fe6ffd61a8"
   name = "github.com/eclipse/paho.mqtt.golang"
-  packages = [".","packets"]
-  revision = "aff15770515e3c57fc6109da73d42b0d46f7f483"
-  version = "v1.1.0"
+  packages = [
+    ".",
+    "packets",
+  ]
+  pruneopts = ""
+  revision = "47bdbb57492fbd6b5b8f9fa507f48f30846924f7"
+  version = "v1.3.0"
+
+[[projects]]
+  digest = "1:5122b0b5a933bd0e16b887aa7844933c8a09fb5ba9b5f5651253cb5336c6462a"
+  name = "github.com/gorilla/websocket"
+  packages = ["."]
+  pruneopts = ""
+  revision = "b65e62901fc1c0d968042419e74789f6af455eb9"
+  version = "v1.4.2"
 
 [[projects]]
   branch = "master"
+  digest = "1:898bc7c802c1e0c20cecd65811e90b7b9bc5651b4a07aefd159451bfb200b2b3"
   name = "golang.org/x/net"
-  packages = ["proxy","websocket"]
+  packages = [
+    "proxy",
+    "websocket",
+  ]
+  pruneopts = ""
   revision = "a04bdaca5b32abe1c069418fb7088ae607de5bd0"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "4b1e2f372b614cd9bb649cbca18cc5f79b2ad7ee294c4e85011e0287bfd9dfbe"
+  input-imports = [
+    "github.com/eclipse/paho.mqtt.golang",
+    "github.com/eclipse/paho.mqtt.golang/packets",
+    "golang.org/x/net/proxy",
+    "golang.org/x/net/websocket",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1
